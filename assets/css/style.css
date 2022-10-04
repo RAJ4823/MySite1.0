@@ -96,6 +96,31 @@ h6 {
   }
 }
 
+.end-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.end-title h2 {
+  cursor: default;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  color: var(--accent);
+}
+
+@media (max-width: 992px) {
+  .end-title h2 {
+    font-size: 12px;
+  }
+}
+
+
 /* header */
 #header {
   transition: ease-in-out 0.3s;
@@ -455,23 +480,6 @@ section .container {
   color: var(--light);
 }
 
-.thanks-title h2 {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  position: absolute;
-  bottom: 50px;
-  color: var(--accent);
-}
-
-@media (max-width: 768px) {
-  .thanks-title h2 {
-    font-size: 10px;
-  }
-}
-
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -683,7 +691,25 @@ section .container {
 
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+  display: none;
 }
+
+.portfolio .filter-show {
+  display: block;
+  animation: fade-in 1s;
+}
+
+/* for smooth transition*/
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 
 .portfolio #portfolio-flters {
   padding: 0;

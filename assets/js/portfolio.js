@@ -68,6 +68,7 @@ const data = {
     }
 }
 
+//Display selected portfolio details
 function displayDetails(key) {
     detailsPage.style.display = 'block';
     menuPage.style.display = 'none';
@@ -82,36 +83,40 @@ function displayDetails(key) {
     window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
+// Closes the portfolio details and open main portfolio section page
 function closeDetails() {
     detailsPage.style.display = 'none';
     menuPage.style.display = 'block';
 }
 
-//  Porfolio isotope and filter
+// Activate listener on window load
 window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-        let portfolioIsotope = new Isotope(portfolioContainer, {
-            itemSelector: '.portfolio-item',
-            layoutMode: 'fitRows'
-        });
+    let portfolioFilters = select('#portfolio-flters li', true);
+    let selectedFilter = '*';
+    filterPortfolios(selectedFilter);
 
-        let portfolioFilters = select('#portfolio-flters li', true);
+    on('click', '#portfolio-flters li', function (e) {
+        e.preventDefault();
+        portfolioFilters.forEach((ele) => ele.classList.remove('filter-active'));
+        this.classList.add('filter-active');
 
-        on('click', '#portfolio-flters li', function (e) {
-            e.preventDefault();
-            portfolioFilters.forEach(function (ele) {
-                ele.classList.remove('filter-active');
-            });
-            this.classList.add('filter-active');
-
-            portfolioIsotope.arrange({
-                filter: this.getAttribute('data-filter')
-            });
-        }, true);
-    }
-
+        filterPortfolios(this.getAttribute('data-filter'));
+    }, true);
 });
+
+//Filter selected portfolios
+function filterPortfolios(selectedFilter) {
+    let portfolios = select('.portfolio-item', true);
+    portfolios.forEach((ele) => {
+        ele.style.transition = '1s';
+        if (ele.classList.contains(selectedFilter) || selectedFilter == '*') {
+            ele.classList.add('filter-show');
+        }
+        else {
+            ele.classList.remove('filter-show');
+        }
+    });
+}
 
 // Initiate portfolio lightbox 
 const portfolioLightbox = GLightbox({
