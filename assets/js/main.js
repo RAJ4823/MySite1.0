@@ -50,9 +50,11 @@ on('click', '#navbar .nav-link', function (e) {
 
     navlinks.forEach((item) => {
       item.classList.remove('active')
+      item.classList.remove('glow')
     })
 
     this.classList.add('active')
+    this.classList.add('glow')
 
     if (navbar.classList.contains('navbar-mobile')) {
       navbar.classList.remove('navbar-mobile')
@@ -103,8 +105,10 @@ window.addEventListener('load', () => {
       navlinks.forEach((item) => {
         if (item.getAttribute('href') == window.location.hash) {
           item.classList.add('active')
+          item.classList.add('glow')
         } else {
           item.classList.remove('active')
+          item.classList.remove('glow')
         }
       })
 
