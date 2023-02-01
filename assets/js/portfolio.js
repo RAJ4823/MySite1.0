@@ -11,14 +11,14 @@ const url = select('#url');
 const data = {
     'supernotes': {
         title: 'SuperNotes',
-        category: 'Web',
+        category: 'Website, Bootstrap, Design',
         date: 'August 2022',
         url: 'https://raj4823.github.io/SuperNotes/',
         description: 'SuperNotes allows you to manage your notes. You can add, delete, edit or can search the notes. It has incredible 5 themes with light mode and dark mode.',
     },
     'super-calculator': {
         title: 'Super Calculator',
-        category: 'Web',
+        category: 'Website, Design',
         date: 'Jan 2022',
         url: 'https://raj4823.github.io/SuperCalculator/',
         description: 'Simple calculator made with HTML, CSS & JS. It has color-changing background which looks awsome.',
@@ -39,18 +39,10 @@ const data = {
     },
     'weather-site': {
         title: 'Weather Site',
-        category: 'Web + API',
+        category: 'Node.js, API',
         date: 'May 2022',
         url: 'https://github.com/RAJ4823/weather-site',
         description: 'A site that gives weather info of any city that you search. It uses OpenWeather API to display weather info of searched city. (Currently Not Hosted)',
-    },
-    'raj-wordpress': {
-        title: 'My Site',
-        category: 'WordPress',
-        date: 'Dec 2020',
-        url: 'https://rajhalpani.wordpress.com/',
-        description: 'A wordpress based blog site of mine with over 7000+ site views.',
-
     },
     'email-phone-extractor': {
         title: 'Email & Phone Extractor',
@@ -61,10 +53,17 @@ const data = {
     },
     'my-site': {
         title: 'My Site',
-        category: 'Bootstrap + Design',
+        category: 'Portfolio Site, Bootstrap, Design',
         date: 'Oct 2022',
         url: 'https://github.com/RAJ4823/MySite',
         description: 'You can see how good it is, but for details it is a bootstrap based portfolio website of mine. It consists a great UI and design. It is a fully responsive website. Current version is 1.0\n\nThis is an easter egg and you found it. 🥳',
+    },
+    'notesnap': {
+        title: 'NoteSnap',
+        category: 'Chrome Extension',
+        date: 'Jan 2023',
+        url: 'https://github.com/RAJ4823/NoteSnap',
+        description: "It is a Chrome Extension for taking note of important details on any website. You can quickly highlight and save any text with just one click. You can also copy, delete or download notes. With NoteSnap, you'll never lose important information again.",
     }
 }
 
