@@ -39,10 +39,10 @@ const data = {
     },
     'weather-site': {
         title: 'Weather Site',
-        category: 'Node.js, API',
-        date: 'May 2022',
-        url: 'https://github.com/RAJ4823/weather-site',
-        description: 'A site that gives weather info of any city that you search. It uses OpenWeather API to display weather info of searched city. (Currently Not Hosted)',
+        category: 'React, API',
+        date: 'Feb 2023',
+        url: 'https://raj4823.github.io/WeatherSite',
+        description: 'You can get up-to-date, accurate weather information with a 48-hour forecast for any city using WeatherSite. It has a slick, modern design, a lovely user interface, and dynamic backgrounds that change depending on the weather.',
     },
     'email-phone-extractor': {
         title: 'Email & Phone Extractor',
