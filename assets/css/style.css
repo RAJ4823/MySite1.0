@@ -836,6 +836,7 @@ section .container:last-child {
   z-index: 1;
   background: var(--black-60);
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .portfolio .portfolio-wrap::before {
