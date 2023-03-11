@@ -27,6 +27,7 @@ on('click', '.mobile-nav-toggle', function (e) {
   this.classList.toggle('bx-menu')
   this.classList.remove('bx-fade-left')
   this.classList.toggle('bx-x')
+  document.body.classList.toggle('scroll-off');
 })
 
 // Scrool with ofset on links with a class name .scrollto
@@ -62,6 +63,7 @@ on('click', '#navbar .nav-link', function (e) {
       navbarToggle.classList.toggle('bx-menu')
       navbarToggle.classList.remove('bx-fade-left')
       navbarToggle.classList.toggle('bx-x')
+      document.body.classList.toggle('scroll-off');
     }
 
     if (this.hash == '#header') {

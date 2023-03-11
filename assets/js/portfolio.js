@@ -90,11 +90,11 @@ function closeDetails() {
 
 // Activate listener on window load
 window.addEventListener('load', () => {
-    let portfolioFilters = select('#portfolio-flters li', true);
+    let portfolioFilters = select('#portfolio-filters li', true);
     let selectedFilter = '*';
     filterPortfolios(selectedFilter);
 
-    on('click', '#portfolio-flters li', function (e) {
+    on('click', '#portfolio-filters li', function (e) {
         e.preventDefault();
         portfolioFilters.forEach((ele) => ele.classList.remove('filter-active'));
         this.classList.add('filter-active');
