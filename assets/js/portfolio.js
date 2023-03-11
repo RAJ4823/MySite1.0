@@ -56,7 +56,7 @@ const data = {
         category: 'Portfolio Site, Bootstrap, Design',
         date: 'Oct 2022',
         url: 'https://github.com/RAJ4823/MySite',
-        description: 'You can see how good it is, but for details it is a bootstrap based portfolio website of mine. It consists a great UI and design. It is a fully responsive website. Current version is 1.0\n\nThis is an easter egg and you found it. 🥳',
+        description: 'You can see how good it is, but for details it is a bootstrap based portfolio website of mine. It consists a great UI and design. It is a fully responsive website. Current version is 2.0\n\nThis is an easter egg and you found it. 🥳',
     },
     'notesnap': {
         title: 'NoteSnap',
