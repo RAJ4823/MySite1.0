@@ -545,6 +545,10 @@ section .container:last-child {
   color: var(--light);
 }
 
+.section-title span {
+  margin-right: -15px !important;
+}
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
