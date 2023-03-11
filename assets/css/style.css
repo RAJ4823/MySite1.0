@@ -55,6 +55,10 @@ body::before {
   }
 }
 
+.scroll-off{
+    overflow: hidden;
+}
+
 a {
   color: var(--accent);
   text-decoration: none;
@@ -110,6 +114,7 @@ h6 {
 @media (max-width: 992px) {
   .end-title h2 {
     font-size: 12px;
+    padding: 0px 15px;
   }
 }
 
@@ -374,13 +379,14 @@ h6 {
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
+  border-radius: 3px;
 }
 
 .navbar a:hover:before,
 .navbar li:hover>a:before,
 .navbar .active:before {
   visibility: visible;
-  width: 25px;
+  width: 70%;
 }
 
 .navbar a:hover,
@@ -446,6 +452,7 @@ h6 {
   overflow-y: auto;
   transition: 0.3s;
   border: 2px solid var(--accent);
+  border-radius: 10px;
 }
 
 .navbar-mobile li {
@@ -477,15 +484,24 @@ section {
 }
 
 section.section-show {
-  top: 100px;
-  bottom: auto;
-  opacity: 1;
-  padding-bottom: 45px;
+    top: 100px;
+    bottom: auto;
+    opacity: 1;
+    padding-bottom: 45px;
 }
 
 section .container {
-  background: var(--black-90);
-  padding: 30px 30px 10px 30px;
+    background: var(--black-90);
+    padding: 30px 30px 10px 30px;
+}
+
+section .container:first-child {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+section .container:last-child {
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
 }
 
 @media (max-width: 768px) {
@@ -541,6 +557,14 @@ section .container {
 .about-me .img {
   background-color: #c888ff21;
   transition: 0.5s;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-me .img-fluid {
+    max-width: min(350px, 100%) !important;
 }
 
 .about-me .content ul {
@@ -586,6 +610,7 @@ section .container {
   position: relative;
   text-align: center;
   background: var(--white-08);
+  border-radius: 5px;
 }
 
 .counts .count-box:hover {
@@ -641,6 +666,7 @@ section .container {
 
 .skills .progress-bar-wrap {
   background: var(--white-20);
+  border-radius: 5px !important;
 }
 
 .skills .progress-bar {
@@ -648,6 +674,7 @@ section .container {
   height: 10px;
   transition: 0.9s;
   background-color: var(--accent);
+  border-radius: 5px !important;
 }
 
 /* interests */
@@ -657,6 +684,7 @@ section .container {
   padding: 20px;
   background: var(--white-08);
   transition: ease-in-out 0.3s;
+  border-radius: 5px;
 }
 
 .interests .icon-box i {
@@ -717,10 +745,6 @@ section .container {
   padding-bottom: 10px;
 }
 
-.resume .resume-item:last-child {
-  padding-bottom: 0;
-}
-
 .resume .resume-item::before {
   content: "";
   position: absolute;
@@ -738,6 +762,10 @@ section .container {
   display: block;
 }
 
+.portfolio .container {
+    border-radius: 10px !important;
+}
+
 .portfolio .portfolio-item {
   margin-bottom: 30px;
   display: none;
@@ -746,6 +774,10 @@ section .container {
 .portfolio .filter-show {
   display: block;
   animation: fade-in 1s;
+}
+
+.portfolio img {
+    border-radius: 5px !important;
 }
 
 /* for smooth transition*/
@@ -760,7 +792,7 @@ section .container {
 }
 
 
-.portfolio #portfolio-flters {
+.portfolio #portfolio-filters {
   padding: 0;
   margin: 0 auto 15px auto;
   list-style: none;
@@ -769,7 +801,7 @@ section .container {
   padding: 2px 15px;
 }
 
-.portfolio #portfolio-flters li {
+.portfolio #portfolio-filters li {
   cursor: pointer;
   display: inline-block;
   padding: 8px 16px 10px 16px;
@@ -784,12 +816,12 @@ section .container {
   border-radius: 4px;
 }
 
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-filters li:hover,
+.portfolio #portfolio-filters li.filter-active {
   background: var(--accent);
 }
 
-.portfolio #portfolio-flters li:last-child {
+.portfolio #portfolio-filters li:last-child {
   margin-right: 0;
 }
 
@@ -799,6 +831,7 @@ section .container {
   overflow: hidden;
   z-index: 1;
   background: var(--black-60);
+  border-radius: 5px;
 }
 
 .portfolio .portfolio-wrap::before {
@@ -812,6 +845,7 @@ section .container {
   transition: all ease-in-out 0.3s;
   z-index: 2;
   opacity: 0;
+  border-radius: 5px;   
 }
 
 .portfolio .portfolio-wrap .portfolio-info {
@@ -828,6 +862,7 @@ section .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;   
 }
 
 .portfolio .portfolio-wrap .portfolio-info::before {
@@ -916,11 +951,11 @@ section .container {
 
 /* portfolio details */
 #portfolio-details {
-  display: none;
+    display: none;
 }
 
 .portfolio-details {
-  padding-top: 40px;
+  padding: 30px !important;
   background: var(--black-90);
   position: relative;
   width: 100%;
@@ -1014,6 +1049,7 @@ section .container {
   padding: 20px;
   width: 100%;
   background: var(--white-08);
+  border-radius: 5px;
 }
 
 .contact .info-box i.bx {
@@ -1077,9 +1113,45 @@ section .container {
   justify-content: center;
 }
 
-/*--------------------------------------------------------------
-# Credits
---------------------------------------------------------------*/
+/* Background-blur effect */
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .portfolio-info, 
+    .count-box,
+    .info-box, 
+    .icon-box, 
+    .about-me .img, 
+    .navbar ul,
+    #portfolio-filters li {
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+    }
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 3px;
+    background-color: var(--black-90) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: var(--accent) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #cc92ff !important;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #cc92ff !important;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/*------ Credits ----*/
 .credits {
   position: fixed;
   bottom: 0;
