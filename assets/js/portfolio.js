@@ -9,7 +9,7 @@ const url = select('#url');
 
 //Object of portfolio details
 const data = {
-    'supernotes': {
+    'super-notes': {
         title: 'SuperNotes',
         category: 'Website, Bootstrap, Design',
         date: 'August 2022',
@@ -17,18 +17,26 @@ const data = {
         description: 'SuperNotes allows you to manage your notes. You can add, delete, edit or can search the notes. It has incredible 5 themes with light mode and dark mode.',
     },
     'super-calculator': {
-        title: 'Super Calculator',
+        title: 'SuperCalculator',
         category: 'Website, Design',
         date: 'Jan 2022',
         url: 'https://raj4823.github.io/SuperCalculator/',
         description: 'Simple calculator made with HTML, CSS & JS. It has color-changing background which looks awsome.',
+    },
+    'super-snake': {
+        title: 'SuperSnake',
+        category: 'Game, Javascript',
+        date: 'Jun 2023',
+        url: 'https://raj4823.github.io/SuperSnake/',
+        description: "SuperSnake is an engaging and addictive snake game that offers captivating game environment where players can control the snake's movement using their mouse/touchpad. With visually appealing graphics, smooth controls, and immersive audio, SuperSnake delivers an enjoyable and challenging gaming experience.",
+
     },
     'nmhp': {
         title: 'NMHP',
         category: 'UI',
         date: 'Mar 2022',
         url: 'https://www.figma.com/file/HOvm8hBwc6MAUnzIxJSOsK/SIH?node-id=0:1',
-        description: 'NMHP means National Mental Health Programme. It is a SIH 2022 project. Our main aim was to reduce exploitations happening in the hospitals with the help of website. This UI describes the working of our website.',
+        description: 'NMHP means National Medical & Health Portal. It is a SIH 2022 project. Our main aim was to reduce exploitations happening in the hospitals with the help of website. This UI describes the working of our website.',
     },
     'student-portfolio': {
         title: 'Student Portfolio',
