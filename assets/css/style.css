@@ -585,15 +585,27 @@ section .container:last-child {
   max-width: min(350px, 100%) !important;
 }
 
+.about-me hr {
+  width: 95%;
+  margin: 20px auto;
+  padding-top: -10px;
+  border: 1.5px solid var(--accent-color2);
+}
+
 .about-me .content ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .about-me .content ul li {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+}
+
+.about-me .content .main-info li:last-child {
+  margin-bottom: 0px;
 }
 
 .about-me .content ul strong {
