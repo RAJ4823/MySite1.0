@@ -656,7 +656,7 @@ section .container:last-child {
 
 .counts .count-box p {
   padding: 0;
-  margin: 0;
+  margin: 0px -20px;
   font-family: var(--font-Exo);
   font-size: 18px;
 }
