@@ -35,7 +35,7 @@ on('click', '#navbar .nav-link', function (e) {
   let section = select(this.hash)
   if (this.hash == '#about') {
     select('#portrait').src = `assets/img/me${countVisit}.png`;
-    countVisit = (countVisit + 1) % 3;
+    countVisit = (countVisit + 1) % 4;
   }
   else {
     select('#portrait').src = `assets/img/me${countVisit}.png`;
