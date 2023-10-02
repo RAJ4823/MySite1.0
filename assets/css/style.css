@@ -1126,19 +1126,23 @@ section .container:last-child {
 }
 
 .cp-links a:nth-child(1):hover {
-  color: #8a24ff;
+  color: #ff8502;
 }
 
 .cp-links a:nth-child(2):hover {
-  color: #0bffef;
+  color: #a85dff;
 }
 
 .cp-links a:nth-child(3):hover {
-  color: #ff8502;
+  color: #0bffef;
 }
 
 .cp-links a:nth-child(4):hover {
   color: #3afc81;
+}
+
+.cp-links a:nth-child(5):hover {
+  color: #ff8b4d;
 }
 
 .contact .download-cv {
