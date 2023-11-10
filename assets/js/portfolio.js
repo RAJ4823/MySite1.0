@@ -72,6 +72,13 @@ const data = {
         date: 'Jan 2023',
         url: 'https://github.com/RAJ4823/NoteSnap',
         description: "It is a Chrome Extension for taking note of important details on any website. You can quickly highlight and save any text with just one click. You can also copy, delete or download notes. With NoteSnap, you'll never lose important information again.",
+    },
+    'login-system': {
+        title: 'Login System',
+        category: 'MERN Stack',
+        date: 'Oct 2023',
+        url: 'https://login-system-raj4823.onrender.com/',
+        description: 'A MERN stack-based login system with user registration, secure authentication, profile management, password recovery with OTP, and email notifications, and more.'
     }
 }
 

@@ -433,27 +433,40 @@
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-filters">
             <li data-filter="*" class="filter-active">All</li>
+            <li data-filter="filter-superverse">SuperVerse</li>
+            <li data-filter="filter-react">MERN Stack</li>
             <li data-filter="filter-bootstrap">Bootstrap</li>
+            <li data-filter="filter-extension">Extension</li>
             <li data-filter="filter-ui">UI</li>
-            <li data-filter="filter-extension">extension</li>
-            <li data-filter="filter-react">React</li>
           </ul>
         </div>
       </div>
 
       <div class="row portfolio-container">
 
+        <!-- login system -->
+        <div class="col-lg-6 portfolio-item filter-react filter-superverse">
+          <div class="portfolio-wrap" onclick="displayDetails('login-system')">
+            <img src="assets/img/portfolio/login-system.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Login System</h4>
+              <p>MERN Stack based Complete Login System</p>
+              <div class="portfolio-links">
+                <a onclick="displayDetails('login-system')" title="View Details">
+                  <i class="bx bx-show"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- weather site -->
-        <div class="col-lg-6 portfolio-item filter-react">
+        <div class="col-lg-6 portfolio-item filter-react filter-superverse">
           <div class="portfolio-wrap" onclick="displayDetails('weather-site')">
             <img src="assets/img/portfolio/weather-site.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>WeatherSite</h4>
               <p>Gives weather info of any city</p>
               <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/weather-site.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Weather Site"><i class="bx bx-expand"
-                      title="View in Fullscreen"></i></a> -->
                 <a onclick="displayDetails('weather-site')" title="View Details">
                   <i class="bx bx-show"></i></a>
               </div>
@@ -462,16 +475,13 @@
         </div>
 
         <!-- SuperSnake -->
-        <div class="col-lg-6 portfolio-item">
+        <div class="col-lg-6 portfolio-item filter-game filter-superverse">
           <div class="portfolio-wrap" onclick="displayDetails('super-snake')">
             <img src="assets/img/portfolio/super-snake.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>SuperSnake</h4>
               <p>The ultimate mouse-controlled snake game</p>
               <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/weather-site.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="Weather Site"><i class="bx bx-expand"
-                      title="View in Fullscreen"></i></a> -->
                 <a onclick="displayDetails('super-site')" title="View Details">
                   <i class="bx bx-show"></i></a>
               </div>
@@ -481,15 +491,13 @@
 
 
         <!-- SuperNotes -->
-        <div class="col-lg-6 portfolio-item filter-bootstrap">
+        <div class="col-lg-6 portfolio-item filter-bootstrap filter-superverse">
           <div class="portfolio-wrap" onclick="displayDetails('super-notes')">
             <img src="assets/img/portfolio/super-notes.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>SuperNotes</h4>
               <p>Note taking website</p>
               <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/super-notes.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="SuperNotes"><i class="bx bx-expand" title="View in Fullscreen"></i></a> -->
                 <a onclick="displayDetails('super-notes')" title="View Details">
                   <i class="bx bx-show"></i></a>
               </div>
@@ -505,9 +513,6 @@
               <h4>NoteSnap</h4>
               <p>Note-Taking Chrome Extenstion</p>
               <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/notesnap.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox" title="NoteSnap"><i class="bx bx-expand"
-                      title="View in Fullscreen"></i></a> -->
                 <a onclick="displayDetails('notesnap')" title="View Details">
                   <i class="bx bx-show"></i></a>
               </div>
@@ -523,9 +528,6 @@
               <h4>Student Portfolio (UI)</h4>
               <p>An example of student's portfolio</p>
               <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/student-portfolio.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Sudent Portfolio (UI)"><i class="bx bx-expand"
-                    title="View in Fullscreen"></i></a> -->
                 <a onclick="displayDetails('student-portfolio')" title="View Details">
                   <i class="bx bx-show"></i></a>
               </div>
@@ -534,16 +536,13 @@
         </div>
 
         <!-- super calculator -->
-        <div class="col-lg-6 portfolio-item filter-bootstrap">
+        <div class="col-lg-6 portfolio-item filter-bootstrap filter-superverse">
           <div class="portfolio-wrap" onclick="displayDetails('super-calculator')">
             <img src="assets/img/portfolio/super-calculator.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>SuperCalculator</h4>
               <p>A calculator with fantastic design</p>
               <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/super-calculator.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Super Calculator"><i class="bx bx-expand"
-                    title="View in Fullscreen"></i></a> -->
                 <a onclick="displayDetails('super-calculator')" title="View Details">
                   <i class="bx bx-show"></i></a>
               </div>
@@ -559,8 +558,6 @@
               <h4>NMHP (UI)</h4>
               <p>SIH 2022 Project</p>
               <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/nmhp.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="nmhp (SIH 2022)"><i class="bx bx-expand" title="View in Fullscreen"></i></a> -->
                 <a onclick="displayDetails('nmhp')" title="View Details">
                   <i class="bx bx-show"></i></a>
               </div>
@@ -576,9 +573,6 @@
               <h4>Email & Phone Extractor</h4>
               <p>Chrome Extenstion</p>
               <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/email-phone-extractor.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Email & Phone Extractor"><i class="bx bx-expand"
-                    title="View in Fullscreen"></i></a> -->
                 <a onclick="displayDetails('email-phone-extractor')" title="View Details">
                   <i class="bx bx-show"></i></a>
               </div>
@@ -594,8 +588,6 @@
               <h4>My Site</h4>
               <p>A Next-Gen Portfolio website</p>
               <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/my-site.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="This Site"><i class="bx bx-expand" title="View in Fullscreen"></i></a> -->
                 <a onclick="displayDetails('my-site')" title="View Details">
                   <i class="bx bx-show"></i></a>
               </div>
