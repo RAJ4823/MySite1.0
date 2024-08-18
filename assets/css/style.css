@@ -599,7 +599,7 @@ section .container:last-child {
 }
 
 .about-me .content ul li {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
@@ -756,6 +756,11 @@ section .container:last-child {
   font-family: "Poppins", sans-serif;
   color: var(--accent);
   margin-bottom: 10px;
+}
+
+.resume .resume-item p {
+  margin: 0 0 10px 0;
+  padding: 0;
 }
 
 .resume .resume-item h5 {
