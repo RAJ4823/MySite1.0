@@ -187,7 +187,7 @@ h2::after,
   color: white;
   text-shadow: 0 0 2px var(--color1), 0 0 8px var(--color2), 0 0 15px var(--color3);
   will-change: filter, color;
-  filter: saturate(100%);
+  filter: saturate(80%);
   animation: flicker var(--interval) 1s infinite;
 }
 
@@ -196,25 +196,58 @@ h2::after,
   --interval: 20s;
   color: var(--accent);
   will-change: filter, color;
-  filter: saturate(100%);
+  filter: saturate(80%);
   animation: flicker var(--interval) 1s infinite;
 }
 
 @keyframes flicker {
   0% {
-    filter: saturate(150%) hue-rotate(-50deg);
+      filter: saturate(100%) hue-rotate(0deg);
   }
-  25% {
-    filter: saturate(200%) hue-rotate(-20deg);
+  40% {
+    filter: saturate(200%) hue-rotate(-50deg);
   }
-  50% {
-    filter: saturate(300%) hue-rotate(10deg);
+  90% {
+    filter: saturate(200%) hue-rotate(10deg);
   }
-  75% {
-    filter: saturate(200%) hue-rotate(-20deg);
+}
+
+#background-lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -10;
+}
+
+.line {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 2px;
+  background-color: transparent;
+  opacity: 0;
+  transform: translateX(-100%);
+  will-change: transform, opacity;
+  animation: moveLine linear infinite;
+}
+
+/* Keyframes to animate the lines from left to right */
+@keyframes moveLine {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    transform: translateX(100%);
   }
   100% {
-    filter: saturate(150%) hue-rotate(-50deg);
+    opacity: 0;
   }
 }
 

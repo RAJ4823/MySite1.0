@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const backgroundLinesContainer = document.getElementById('background-lines');
+    renderBackgroundLines(backgroundLinesContainer);
+
     const aboutMeContainer = document.getElementById('render-about-me');
     renderAboutMe(aboutMeContainer);
 
@@ -21,10 +24,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const projectsListContainer = document.getElementById('render-projects-list-data');
     renderProjectsListData(projectsListContainer);
-
-
 });
 
+function renderBackgroundLines(container) {
+    const colors = [
+        "#129ee9",
+        "#025bd3",
+        "#0037e5",
+        "#093aef",
+        "#d254f6",
+        "#ff48ff",
+        "#e648ff",
+        "#f7abf6",
+        "#d300d4",
+    ];
+
+    let linesCount = Math.random() * 30 + 10;
+    for (let i = 0; i < linesCount ; i++) {
+        const line = document.createElement('div');
+        line.classList.add('line');
+
+        // Randomly assign a color  
+        line.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+        // Set random position and animation duration
+        line.style.left = `${Math.random() * 50}vw`;
+        line.style.width = `${Math.random() * 80}vw`;
+        line.style.animationDuration = `${Math.random() * 20 + 2}s`;
+        // line.style.top = `${Math.random() * 100}vh`;
+
+        // Set top position, with a preference for top or bottom regions
+        const randomTop = Math.random();
+        line.style.top = (randomTop < 0.5) ?  `${Math.random() * 40}vh` :  `${Math.random() * 40 + 60}vh` 
+
+        container.appendChild(line);
+    }
+}
 
 function renderAboutMe(container) {
     let html = `<h3 class="glow-text">${ABOUT_ME_DATA.title}</h3>`;
