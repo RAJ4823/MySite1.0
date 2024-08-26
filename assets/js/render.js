@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 function renderAboutMe(container) {
-    let html = `<h3>${ABOUT_ME_DATA.title}</h3>`;
+    let html = `<h3 class="glow-text">${ABOUT_ME_DATA.title}</h3>`;
 
     // Render introduction section
     html += '<ul class="main-info">';
     html += ABOUT_ME_DATA.introduction
         .map(intro => `
         <li>
-          <i class="bi bi-chevron-right"></i>
+          <i class="bi bi-chevron-right glow-text"></i>
           <span>${intro}</span>
         </li>`)
         .join('');
@@ -43,7 +43,7 @@ function renderAboutMe(container) {
         if (index > 0 && index % 2 === 0) {
             html += '</ul></div><div class="col-lg-6"><ul>';
         }
-        html += `<li><i class="bi bi-chevron-right"></i> <strong>${info.label}:</strong> <span>${info.value}</span></li>`;
+        html += `<li><i class="bi bi-chevron-right glow-text"></i> <strong>${info.label}:</strong> <span>${info.value}</span></li>`;
     });
     html += '</ul></div></div>';
 
@@ -56,10 +56,12 @@ function renderEducationData(container) {
     EDUCATION_DATA.forEach(education => {
         html += `
         <div class="resume-item">
-            <h4>${education.school}</h4>
-            <p><em>${education.degree}</em></p>
-            <h5>${education.duration}  |  ${education.location}</h5>
-            <ul>
+            <h4 class="resume-item-title glow-text">${education.school}</h4>
+            <div class="resume-item-subtitle">
+                <p><em>${education.degree}</em></p>
+                <h5>${education.duration}  |  ${education.location}</h5>
+            </div>
+            <ul class="resume-item-description">
             ${education.achievements
                 .map(achievement => `<li>${achievement}</li>`)
                 .join('')
@@ -78,17 +80,26 @@ function renderExperienceData(container) {
     EXPERIENCE_DATA.forEach(experience => {
         html += `
         <div class="resume-item">
-            <h4>${experience.company}</h4>
-            <p><em>${experience.role}</em></p>
-            <h5>${experience.duration}  |  ${experience.location}</h5>
-            <ul>
-            ${experience.responsibilities
-                .map(responsibility => `<li>${responsibility}</li>`)
-                .join('')
-            }
+            <h4 class="resume-item-title glow-text">${experience.company}</h4>
+            `;
+
+        experience.roles.forEach(exp => {
+            html += `
+            <div class="resume-item-subtitle">
+                <p><em>${exp.role}</em></p>
+                <h5>${exp.duration}  |  ${exp.location}</h5>
+            </div>
+            <ul class="resume-item-description">
+                ${exp.responsibilities
+                    .map(responsibility => `<li>${responsibility}</li>`)
+                    .join('')
+                }
             </ul>
-        </div>
-        `;
+            `;
+        });
+
+        html += `
+        </div>`;
     });
 
     container.innerHTML = html;

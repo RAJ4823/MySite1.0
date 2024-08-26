@@ -35,7 +35,7 @@ const EDUCATION_DATA = [
     achievements: [
       "Percentage: 83.54%",
       "Topped school with 98.43 PR and A2 Grade.",
-      "Secured impressive ACPC rank of 862",
+      "Secured impressive ACPC rank of 862 in Gujarat.",
     ],
   },
   {
@@ -53,24 +53,52 @@ const EDUCATION_DATA = [
 const EXPERIENCE_DATA = [
   {
     company: "Corpository - A Yubi Company",
-    role: "Associate Software Engineer",
-    duration: "Feb, 2024 - Present",
-    location: "On-site Ahmedabad",
-    responsibilities: [
-      "Learning Java, Spring Boot framework, and various Java-related technologies through hands-on experience.",
-      "Became part of the 'Spider-Team,' where I focused on web crawling tasks.",
+    roles: [
+      {
+        role: "Associate Software Engineer",
+        duration: "Jun, 2024 - Present",
+        location: "Ahmedabad",
+        responsibilities: [
+          "Contributing to various backend products and multiple projects.",
+          "Learned and implemented web crawling techniques using Java.",
+          "Gaining expertise in AWS services, including EC2, S3, and Lambda."
+        ]
+      },
+      {
+        role: "Software Engineer Intern",
+        duration: "Feb, 2024 - May, 2024",
+        location: "Ahmedabad",
+        responsibilities: [
+          "Learned Java, Spring Boot framework, MySQL and various Java-related technologies through hands-on experience.",
+          "Became part of the 'Spider-Team,' where I focused on web crawling tasks.",
+        ]
+      }
     ]
   },
   {
     company: "Zero to Zee",
-    role: "Software Developer and Team Lead",
-    duration: "Feb, 2023 - Present",
-    location: "Remote",
-    responsibilities: [
-      "As an intern, I significantly contributed to the development and refining of the two popular chrome extensions 'Prime Sender' and 'Pro Sender', which are now used by over 60,000 people.",
-      "Besides coding, I also led a team of four developers, focusing on making our teamwork better and getting more work done.",
-      "I communicated with clients from all around the world, listening to their concerns and fixing problems quickly.",
-      "Currently, I'm working on a new project called 'Mobbana,' which is a Google Meet extension for recording and transcribing. We're building it from scratch with a new team."
+    roles: [
+      {
+        role: "Technical Lead",
+        duration: "Jan, 2024 - Present",
+        location: "Remote",
+        responsibilities: [
+          "Managing all technical aspects of the company’s products, with a focus on 'Prime Sender' and 'Mobbana'.",
+          "Under my leadership, the user base for our product 'Prime Sender' has grown to 90k, with expectations to reach 100k soon.",
+          "Currently leading the development of 'Mobbana,' a Google Meet extension for recording and transcribing, built from scratch with a new team."
+        ]
+      },
+      {
+        role: "Software Developer",
+        duration: "Feb, 2023 - Jan, 2024",
+        location: "Remote",
+        responsibilities: [
+          "Significantly contributed to the development and refinement of the two popular Chrome extensions 'Prime Sender' and 'Pro Sender'",
+          "When I joined, the user base for Prime Sender was at 30k. Through my contributions, the user count doubled to 60k.",
+          "Led a team of four developers, enhancing teamwork and increasing productivity.",
+          "Communicated with clients globally, addressing their concerns and providing quick solutions."
+        ]
+      }
     ]
   }
 ];
