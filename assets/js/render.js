@@ -18,6 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const cpProfilesContainer = document.getElementById('render-cp-profiles-data');
     renderCpProfilesData(cpProfilesContainer);
+
+    const projectsListContainer = document.getElementById('render-projects-list-data');
+    renderProjectsListData(projectsListContainer);
+
+
 });
 
 
@@ -138,6 +143,80 @@ function renderSkillsData(container) {
     html += '</div>';
 
     container.innerHTML = html;
+}
+
+function renderProjectsListData(container) {
+    let html = '';
+
+    for (const key in PROJECTS_DATA) {
+        const project = PROJECTS_DATA[key];
+        const filterNames = project.filter.map(name => 'filter-' + name).join(" ");
+        const imageSource = `assets/img/portfolio/${key}.jpg`;
+
+        html += `
+        <div class="col-lg-6 portfolio-item ${filterNames}">
+          <div class="portfolio-wrap">
+            <img src="${imageSource}" class="img-fluid" alt="${project.title}">
+            <div class="portfolio-info">
+              <h4>${project.title}</h4>
+              <p>${project.shortDescription}</p>
+              <div class="portfolio-links">
+                <a onclick="openProjectDetails('${key}')" title="View Details">
+                  <i class="bx bx-show"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    container.innerHTML = html;
+}
+
+function closeProjectDetails() {
+    const projectDetailsContainer = document.getElementById('render-portfolio-details');
+    const projectMenuContainer = document.getElementById('portfolio-menu');
+
+    projectDetailsContainer.style.display = 'none';
+    projectMenuContainer.style.display = 'block';
+}
+
+function openProjectDetails(key) {
+    const projectDetailsContainer = document.getElementById('render-portfolio-details');
+    const projectMenuContainer = document.getElementById('portfolio-menu');
+
+    const project = PROJECTS_DATA[key];
+    const imageSource = `assets/img/portfolio/${key}.jpg`;
+
+    let html = `
+      <div class="section-title">
+        <h2>Details</h2>
+        <span><i onclick="closeProjectDetails()" class="bx bx-x" title="Exit"></i></span>
+      </div>
+
+      <div class="row">
+        <h2 id="title" class="portfolio-title">${project.title}</h2>
+        <div class="col-lg-8">
+          <img id="image" src="${imageSource}" width="100%" alt="">
+        </div>
+        <div class="col-lg-4 portfolio-info">
+          <h3>Project information</h3>
+          <ul>
+            <li>Category: <span id="category" class="text">${project.category}</span></li>
+            <li>Project date: <span id="date" class="text">${project.date}</span></li>
+            <li><a type="button" id="url" href="${project.url}" target="_blank">View Project</a></li>
+          </ul>
+          <br>
+          <h3>Project Description</h3>
+          <p id="description" class="text">${project.description}</p>
+        </div>
+      </div>
+    `;
+
+    projectDetailsContainer.innerHTML = html;
+    projectDetailsContainer.style.display = 'block';
+    projectMenuContainer.style.display = 'none';
 }
 
 function renderSocialProfilesData(container) {

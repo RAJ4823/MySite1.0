@@ -58,7 +58,7 @@
         <ul>
           <li><a class="nav-link active glow" href="#header">Home</a></li>
           <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#portfolio" onclick="closeDetails()">Projects</a></li>
+          <li><a class="nav-link" href="#portfolio" onclick="closeProjectDetails()">Projects</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
         <i class="bx bx-menu bx-fade-left mobile-nav-toggle"></i>
@@ -244,6 +244,7 @@
   <!-- ======= Portfolio Section ======= -->
   <section id="portfolio" class="portfolio">
 
+    <!-- portfolio list / menu page -->
     <div id="portfolio-menu" class="container">
 
       <div class="section-title">
@@ -265,160 +266,7 @@
         </div>
       </div>
 
-      <div class="row portfolio-container">
-
-        <!-- login system -->
-        <div class="col-lg-6 portfolio-item filter-react filter-superverse">
-          <div class="portfolio-wrap" onclick="displayDetails('login-system')">
-            <img src="assets/img/portfolio/login-system.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Login System</h4>
-              <p>MERN Stack based Complete Login System</p>
-              <div class="portfolio-links">
-                <a onclick="displayDetails('login-system')" title="View Details">
-                  <i class="bx bx-show"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- weather site -->
-        <div class="col-lg-6 portfolio-item filter-react filter-superverse">
-          <div class="portfolio-wrap" onclick="displayDetails('weather-site')">
-            <img src="assets/img/portfolio/weather-site.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>WeatherSite</h4>
-              <p>Gives weather info of any city</p>
-              <div class="portfolio-links">
-                <a onclick="displayDetails('weather-site')" title="View Details">
-                  <i class="bx bx-show"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SuperSnake -->
-        <div class="col-lg-6 portfolio-item filter-game filter-superverse">
-          <div class="portfolio-wrap" onclick="displayDetails('super-snake')">
-            <img src="assets/img/portfolio/super-snake.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>SuperSnake</h4>
-              <p>The ultimate mouse-controlled snake game</p>
-              <div class="portfolio-links">
-                <a onclick="displayDetails('super-site')" title="View Details">
-                  <i class="bx bx-show"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- SuperNotes -->
-        <div class="col-lg-6 portfolio-item filter-bootstrap filter-superverse">
-          <div class="portfolio-wrap" onclick="displayDetails('super-notes')">
-            <img src="assets/img/portfolio/super-notes.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>SuperNotes</h4>
-              <p>Note taking website</p>
-              <div class="portfolio-links">
-                <a onclick="displayDetails('super-notes')" title="View Details">
-                  <i class="bx bx-show"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- note taking extension  -->
-        <div class="col-lg-6 portfolio-item filter-extension">
-          <div class="portfolio-wrap" onclick="displayDetails('notesnap')">
-            <img src="assets/img/portfolio/notesnap.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>NoteSnap</h4>
-              <p>Note-Taking Chrome Extenstion</p>
-              <div class="portfolio-links">
-                <a onclick="displayDetails('notesnap')" title="View Details">
-                  <i class="bx bx-show"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- student portfolio -->
-        <div class="col-lg-6 portfolio-item filter-ui">
-          <div class="portfolio-wrap" onclick="displayDetails('student-portfolio')">
-            <img src="assets/img/portfolio/student-portfolio.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Student Portfolio (UI)</h4>
-              <p>An example of student's portfolio</p>
-              <div class="portfolio-links">
-                <a onclick="displayDetails('student-portfolio')" title="View Details">
-                  <i class="bx bx-show"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- super calculator -->
-        <div class="col-lg-6 portfolio-item filter-bootstrap filter-superverse">
-          <div class="portfolio-wrap" onclick="displayDetails('super-calculator')">
-            <img src="assets/img/portfolio/super-calculator.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>SuperCalculator</h4>
-              <p>A calculator with fantastic design</p>
-              <div class="portfolio-links">
-                <a onclick="displayDetails('super-calculator')" title="View Details">
-                  <i class="bx bx-show"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- nmhp -->
-        <div class="col-lg-6 portfolio-item filter-ui">
-          <div class="portfolio-wrap" onclick="displayDetails('nmhp')">
-            <img src="assets/img/portfolio/nmhp.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>NMHP (UI)</h4>
-              <p>SIH 2022 Project</p>
-              <div class="portfolio-links">
-                <a onclick="displayDetails('nmhp')" title="View Details">
-                  <i class="bx bx-show"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- email and phone number extractor extension  -->
-        <div class="col-lg-6 portfolio-item filter-extension">
-          <div class="portfolio-wrap" onclick="displayDetails('email-phone-extractor')">
-            <img src="assets/img/portfolio/email-phone-extractor.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Email & Phone Extractor</h4>
-              <p>Chrome Extenstion</p>
-              <div class="portfolio-links">
-                <a onclick="displayDetails('email-phone-extractor')" title="View Details">
-                  <i class="bx bx-show"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- My Site -->
-        <div class="col-lg-6 portfolio-item filter-bootstrap">
-          <div class="portfolio-wrap" onclick="displayDetails('my-site')">
-            <img src="assets/img/portfolio/my-site.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>My Site</h4>
-              <p>A Next-Gen Portfolio website</p>
-              <div class="portfolio-links">
-                <a onclick="displayDetails('my-site')" title="View Details">
-                  <i class="bx bx-show"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <div id="render-projects-list-data" class="row portfolio-container"></div>
 
       <div class="end-title container">
         <h2 class="glow-text">Sometimes not giving up is more important than winning</h2>
@@ -426,30 +274,7 @@
     </div>
 
     <!-- portfolio Details page -->
-    <div id="portfolio-details" class="container portfolio-details">
-      <div class="section-title">
-        <h2>Details</h2>
-        <span><i onclick="closeDetails()" class="bx bx-x" title="Exit"></i></span>
-      </div>
-
-      <div class="row">
-        <h2 id="title" class="portfolio-title"></h2>
-        <div class="col-lg-8">
-          <img id="image" src="" width="100%" alt="">
-        </div>
-        <div class="col-lg-4 portfolio-info">
-          <h3>Project information</h3>
-          <ul>
-            <li>Category: <span id="category" class="text"></span></li>
-            <li>Project date: <span id="date" class="text"></span></li>
-            <li><a type="button" id="url" href="" target=”_blank”>View Project</a></li>
-          </ul>
-          <br>
-          <h3>Project Description</h3>
-          <p id="description" class="text"></p>
-        </div>
-      </div>
-    </div>
+    <div id="render-portfolio-details" class="container portfolio-details"></div>
 
   </section><!-- End Portfolio Section -->
 
@@ -523,7 +348,6 @@
   <script src="assets/js/data.js"></script>
   <script src="assets/js/render.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/portfolio.js"></script>
 
 </body>
 

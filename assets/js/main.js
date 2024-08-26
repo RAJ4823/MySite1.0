@@ -121,6 +121,18 @@ window.addEventListener('load', () => {
       scrollto(window.location.hash)
     }
   }
+
+  let portfolioFilters = select('#portfolio-filters li', true);
+  let selectedFilter = '*';
+  filterPortfolios(selectedFilter);
+
+  on('click', '#portfolio-filters li', function (e) {
+    e.preventDefault();
+    portfolioFilters.forEach((ele) => ele.classList.remove('filter-active'));
+    this.classList.add('filter-active');
+
+    filterPortfolios(this.getAttribute('data-filter'));
+  }, true);
 });
 
 //  Skills animation
@@ -141,3 +153,21 @@ if (skilsContent) {
 // Initiate Pure Counter 
 new PureCounter();
 
+//Filter selected portfolios
+function filterPortfolios(selectedFilter) {
+  let portfolios = select('.portfolio-item', true);
+  portfolios.forEach((ele) => {
+    ele.style.transition = '1s';
+    if (ele.classList.contains(selectedFilter) || selectedFilter == '*') {
+      ele.classList.add('filter-show');
+    }
+    else {
+      ele.classList.remove('filter-show');
+    }
+  });
+}
+
+// Initiate portfolio lightbox 
+const portfolioLightbox = GLightbox({
+  selector: '.portfolio-lightbox'
+});
