@@ -179,21 +179,42 @@ h6 {
 .glow,
 h2::after,
 .progress-bar {
-  --interval: 7s;
+  --interval: 20s;
   --color1: #e4c8fd;
   --color2: #a641ff;
   --color3: #6c00ca;
-  color: #921ef8;
+  /* color: #921ef8; */
+  color: white;
   text-shadow: 0 0 2px var(--color1), 0 0 8px var(--color2), 0 0 15px var(--color3);
   will-change: filter, color;
-  filter: saturate(60%);
-  animation: flicker steps(100) var(--interval) 1s infinite;
+  filter: saturate(100%);
+  animation: flicker var(--interval) 1s infinite;
+}
+
+.glow-text,
+.resume-item::before {
+  --interval: 20s;
+  color: var(--accent);
+  will-change: filter, color;
+  filter: saturate(100%);
+  animation: flicker var(--interval) 1s infinite;
 }
 
 @keyframes flicker {
+  0% {
+    filter: saturate(150%) hue-rotate(-50deg);
+  }
+  25% {
+    filter: saturate(200%) hue-rotate(-20deg);
+  }
   50% {
-    color: white;
-    filter: saturate(200%) hue-rotate(10deg);
+    filter: saturate(300%) hue-rotate(10deg);
+  }
+  75% {
+    filter: saturate(200%) hue-rotate(-20deg);
+  }
+  100% {
+    filter: saturate(150%) hue-rotate(-50deg);
   }
 }
 
@@ -742,13 +763,13 @@ section .container:last-child {
 }
 
 .resume .resume-item {
-  padding: 0 0 20px 20px;
+  padding: 0 0 10px 20px;
   margin-top: -2px;
   border-left: 2px solid var(--white-20);
   position: relative;
 }
 
-.resume .resume-item h4 {
+.resume .resume-item-title {
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
@@ -758,18 +779,31 @@ section .container:last-child {
   margin-bottom: 10px;
 }
 
+.resume .resume-item-subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume .resume-item.resume-item-subtitle:not(:first-child) {
+  margin-top: 15px;
+}
+
 .resume .resume-item p {
+  font-weight: 500;
+  font-size: 17px;
   margin: 0 0 10px 0;
   padding: 0;
 }
 
 .resume .resume-item h5 {
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0.15);
+  font-size: 15px;
+  background: rgb(255 255 255 / 15%);
   padding: 5px 15px;
   display: inline-block;
-  font-weight: 600;
   margin-bottom: 10px;
+  border-radius: 7px;
 }
 
 .resume .resume-item ul {
