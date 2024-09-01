@@ -52,7 +52,7 @@ const EDUCATION_DATA = [
 
 const EXPERIENCE_DATA = [
   {
-    company: "Corpository - A Yubi Company",
+    company: "Accumn - A Yubi Company",
     roles: [
       {
         role: "Associate Software Engineer",
