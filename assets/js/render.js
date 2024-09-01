@@ -27,38 +27,53 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function renderBackgroundLines(container) {
-    const colors = [
-        "#129ee9",
-        "#025bd3",
-        "#0037e5",
-        "#093aef",
-        "#d254f6",
-        "#ff48ff",
-        "#e648ff",
-        "#f7abf6",
-        "#d300d4",
-    ];
+    for (let i = 0; i < random(5, 10, true); i++) {
+        setTimeout(() => {
+            const line = document.createElement('div');
+            line.classList.add('line');
 
-    let linesCount = Math.random() * 30 + 10;
-    for (let i = 0; i < linesCount ; i++) {
-        const line = document.createElement('div');
-        line.classList.add('line');
+            // Randomly assign initial properties
+            setRandomProperties(line);
 
-        // Randomly assign a color  
-        line.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            // Reassign properties after each animation iteration
+            line.addEventListener('animationiteration', () => {
+                line.style.animationIterationCount = 0;
 
-        // Set random position and animation duration
-        line.style.left = `${Math.random() * 50}vw`;
-        line.style.width = `${Math.random() * 80}vw`;
-        line.style.animationDuration = `${Math.random() * 20 + 2}s`;
-        // line.style.top = `${Math.random() * 100}vh`;
-
-        // Set top position, with a preference for top or bottom regions
-        const randomTop = Math.random();
-        line.style.top = (randomTop < 0.5) ?  `${Math.random() * 40}vh` :  `${Math.random() * 40 + 60}vh` 
-
-        container.appendChild(line);
+                // Wait for a random amount of time, then reapply the animation
+                setTimeout(() => {
+                    setRandomProperties(line);
+                }, random(500, 2000));
+            });
+            container.appendChild(line);
+        }, i * 1000);
     }
+}
+
+function setRandomProperties(line) {
+    const colors = ["#129ee9", "#025bd3", "#0037e5", "#093aef", "#d254f6", "#ff48ff", "#e648ff", "#f7abf6", "#d300d4"];
+
+    // Randomly assign a color  
+    line.style.backgroundColor = colors[random(0, colors.length, true)];
+
+    // Set random position and animation duration
+    let lineWidth = random(10, 70);
+    let lineLeft = random(0, 10);
+    let animationDuration = random(10, 20, true);
+
+    line.style.left = `${lineLeft}`;
+    line.style.width = `${lineWidth}vw`;
+    line.style.animationDuration = `${animationDuration}s`;
+
+    // Set top position, with a preference for top or bottom regions
+    line.style.top = (random(0, 1) < 0.5) ? `${random(0, 40)}vh` : `${random(60, 100)}vh`;
+
+    // Static Properties
+    line.style.animationIterationCount = 'infinite';
+}
+
+function random(min, max, floor = false) {
+    let rand = (Math.random() * (max - min)) + min;
+    return floor ? Math.floor(rand) : rand;
 }
 
 function renderAboutMe(container) {

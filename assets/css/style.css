@@ -178,8 +178,9 @@ h6 {
 /* == LOOK & FEEL == */
 .glow,
 h2::after,
-.progress-bar {
-  --interval: 20s;
+.progress-bar,
+.navbar .nav-link:before  {
+  --interval: 60s;
   --color1: #e4c8fd;
   --color2: #a641ff;
   --color3: #6c00ca;
@@ -193,7 +194,7 @@ h2::after,
 
 .glow-text,
 .resume-item::before {
-  --interval: 20s;
+  --interval: 60s;
   color: var(--accent);
   will-change: filter, color;
   filter: saturate(80%);
@@ -224,12 +225,11 @@ h2::after,
 
 .line {
   position: absolute;
-  bottom: 0;
-  width: 100px;
   height: 2px;
   background-color: transparent;
   opacity: 0;
-  transform: translateX(-100%);
+  left: 0;
+  transform: translateX(-100vw);
   will-change: transform, opacity;
   animation: moveLine linear infinite;
 }
@@ -237,17 +237,20 @@ h2::after,
 /* Keyframes to animate the lines from left to right */
 @keyframes moveLine {
   0% {
-    opacity: 0;
-    transform: translateX(-100%);
+    box-shadow: none;
+    transform: translateX(-100vw);
   }
-  10% {
+  5% {
+    opacity: 0.5;
+  }
+  50% {
     opacity: 0.7;
-  }
-  90% {
-    transform: translateX(100%);
+    box-shadow: 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor;
   }
   100% {
     opacity: 0;
+    box-shadow: none;
+    transform: translateX(200vw);
   }
 }
 
