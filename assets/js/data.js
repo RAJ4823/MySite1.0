@@ -1,11 +1,10 @@
 const ABOUT_ME_DATA = {
   title: 'Hello...',
   introduction: [
-    "I'm a Software Developer with great problem-solving and designing skills.",
-    "I'm passionate about my work because I genuinely enjoy it. I enjoy facing challenges and always set goals to keep myself motivated.",
+    "I'm a passionate Software Developer and Technical Lead with hands-on experience in backend systems, AWS, and Chrome extensions.",
+    "Known for delivering high-impact features, scaling products to 100K+ users, and leading teams, I take complete ownership and thrive on solving real-world problems with clean, scalable solutions.",
     "With a track record of developing impressive websites and successfully solving over 1500 competitive problems on platforms like Codechef, LeetCode, and Codeforces, I have honed my skills and gained valuable experience over the years.",
     "I'm a team player who adapts quickly and contributes positively to the work environment.",
-    "Outside of work, I'm a big sports fan, especially cricket and esports like BGMI."
   ],
   personalInfo: [
     { label: "Birthday", value: "4th August, 2003" },
@@ -59,9 +58,9 @@ const EXPERIENCE_DATA = [
         duration: "Jun, 2024 - Present",
         location: "Ahmedabad",
         responsibilities: [
-          "Contributing to various backend products and multiple projects.",
-          "Learned and implemented web crawling techniques using Java.",
-          "Gaining expertise in AWS services, including EC2, S3, and Lambda."
+          "Owned and delivered high-quality features with strong accountability. Played a key role in team success.",
+          "Mentored and assisted teammates — including senior engineers — with debugging and implementation.",
+          "Actively working with Java, Spring Boot, Kafka, HtmlUnit (crawling), and AWS (EC2, S3, Lambda)",
         ]
       },
       {
@@ -69,8 +68,8 @@ const EXPERIENCE_DATA = [
         duration: "Feb, 2024 - May, 2024",
         location: "Ahmedabad",
         responsibilities: [
-          "Learned Java, Spring Boot framework, MySQL and various Java-related technologies through hands-on experience.",
-          "Became part of the 'Spider-Team,' where I focused on web crawling tasks.",
+          "Gained hands-on experience in Java, Spring Boot, MySQL, and backend architecture.",
+          "Joined the “Crawling-Team” and started developing web crawlers using HtmlUnit."
         ]
       }
     ]
@@ -83,9 +82,10 @@ const EXPERIENCE_DATA = [
         duration: "Jan, 2024 - Present",
         location: "Remote",
         responsibilities: [
-          "Managing all technical aspects of the company’s products, with a focus on 'Prime Sender' and 'Mobbana'.",
-          "Under my leadership, the user base for our product 'Prime Sender' has grown to 90k, with expectations to reach 100k soon.",
-          "Currently leading the development of 'Mobbana,' a Google Meet extension for recording and transcribing, built from scratch with a new team."
+          "Managing all technical aspects of the company’s key products - Prime Sender, Pro Sender and Mobbana.",
+          "Scaled user base of Prime Sender from 60K to 100K, and Pro Sender from 5K to 70K under my leadership.",
+          "Led the development of key features like login system, dashboard, multi-account payments, and config-based dynamic updates.",
+          "Responsible for solutioning, assigning tasks, reviewing code, and handling full-stack development across all products",
         ]
       },
       {
@@ -93,10 +93,10 @@ const EXPERIENCE_DATA = [
         duration: "Feb, 2023 - Jan, 2024",
         location: "Remote",
         responsibilities: [
-          "Significantly contributed to the development and refinement of the two popular Chrome extensions 'Prime Sender' and 'Pro Sender'",
-          "When I joined, the user base for Prime Sender was at 30k. Through my contributions, the user count doubled to 60k.",
+          "Significantly contributed to the development and refinement of the two Chrome extensions 'Prime Sender' and 'Pro Sender'",
           "Led a team of four developers, enhancing teamwork and increasing productivity.",
-          "Communicated with clients globally, addressing their concerns and providing quick solutions."
+          "Communicated with clients globally, addressing their concerns and providing quick solutions.",
+          "Doubled Prime Sender’s user base from 30K to 60K during tenure.",
         ]
       }
     ]
@@ -106,7 +106,7 @@ const EXPERIENCE_DATA = [
 const SKILLS_DATA = [
   { skill: "Front-end Web Development", percentage: 95 },
   { skill: "Full-stack Web Development", percentage: 75 },
-  { skill: "AWS [S3, Lambda, RDS, DynamoDB]", percentage: 85 },
+  { skill: "AWS [EC2, S3, Lambda, RDS, DynamoDB]", percentage: 85 },
   { skill: "UI/UX & Design", percentage: 70 },
   { skill: "Figma & Canva", percentage: 90 },
   { skill: "Web-Extension Development", percentage: 95 },
