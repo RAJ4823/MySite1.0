@@ -9,7 +9,6 @@ const ABOUT_ME_DATA = {
   personalInfo: [
     { label: "Birthday", value: "4th August, 2003" },
     { label: "City", value: "Mansa, Gandhinagar, Gujarat" },
-    { label: "Phone", value: "+91 91040 94691" },
     { label: "Email", value: "halpaniraj.hr4823@gmail.com" }
   ]
 };
