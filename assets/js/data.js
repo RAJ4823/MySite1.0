@@ -64,38 +64,11 @@ const EXPERIENCE_DATA = [
       },
       {
         role: "Software Engineer Intern",
-        duration: "Feb, 2024 - May, 2024",
+        duration: "Mar, 2024 - May, 2024",
         location: "Ahmedabad",
         responsibilities: [
           "Gained hands-on experience in Java, Spring Boot, MySQL, and backend architecture.",
           "Joined the “Crawling-Team” and started developing web crawlers using HtmlUnit."
-        ]
-      }
-    ]
-  },
-  {
-    company: "Zero to Zee",
-    roles: [
-      {
-        role: "Technical Lead",
-        duration: "Jan, 2024 - Present",
-        location: "Remote",
-        responsibilities: [
-          "Managing all technical aspects of the company’s key products - Prime Sender, Pro Sender and Mobbana.",
-          "Scaled user base of Prime Sender from 60K to 100K, and Pro Sender from 5K to 70K under my leadership.",
-          "Led the development of key features like login system, dashboard, multi-account payments, and config-based dynamic updates.",
-          "Responsible for solutioning, assigning tasks, reviewing code, and handling full-stack development across all products",
-        ]
-      },
-      {
-        role: "Software Developer",
-        duration: "Feb, 2023 - Jan, 2024",
-        location: "Remote",
-        responsibilities: [
-          "Significantly contributed to the development and refinement of the two Chrome extensions 'Prime Sender' and 'Pro Sender'",
-          "Led a team of four developers, enhancing teamwork and increasing productivity.",
-          "Communicated with clients globally, addressing their concerns and providing quick solutions.",
-          "Doubled Prime Sender’s user base from 30K to 60K during tenure.",
         ]
       }
     ]
